@@ -59,9 +59,7 @@ export class TodosComponent implements OnInit {
   }
 
   sendSMSNotification() {
-    const accountSid = 'AC883d01cff9800d599a402911cd9028ca';
-    const authToken = '867ec02396435649ebf882fbad533166';
-    const twilioNumber = '+13613092096';
+    
     const recipientNumber = this.phoneNumber;
     // const recipientNumber = '+8801840656367';
     const message = 'Take Medicine Now!';
