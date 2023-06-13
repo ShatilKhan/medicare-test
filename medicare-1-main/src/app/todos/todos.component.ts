@@ -6,6 +6,12 @@ import {
   FormControl,
 } from "@angular/forms";
 import * as moment from "moment";
+import axios from 'axios';
+import { HttpClient } from '@angular/common/http';
+import { Validators } from '@angular/forms';
+
+
+
 
 @Component({
   selector: "app-todos",
@@ -25,7 +31,8 @@ export class TodosComponent implements OnInit {
   });
   phoneNumber!: string;
 
-  constructor(private todoService: TodoService) {}
+  constructor(private todoService: TodoService , private http: HttpClient) {}
+  
 
   ngOnInit(): void {
     this.loadTodos();
@@ -33,7 +40,62 @@ export class TodosComponent implements OnInit {
     this.breakpoint = window.innerWidth <= 600 ? 1 : 2;
     this.height = window.innerWidth <= 600 ? "200px" : "500px";
     document.getElementById('myTopnav')!.style.display = 'block';
+
+    this.sendSMSNotification(); // Call the function directly
+
+
+    // Set Interval for SMS
+    setInterval(() => {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+
+      // Adjust the hours as per your timezone
+      if (hours === 3 || hours === 13 || hours === 17 || hours === 21) {
+        this.sendSMSNotification();
+      }
+    }, 60000); // Check every minute
+  
   }
+
+  sendSMSNotification() {
+    const accountSid = 'AC883d01cff9800d599a402911cd9028ca';
+    const authToken = '867ec02396435649ebf882fbad533166';
+    const twilioNumber = '+13613092096';
+    const recipientNumber = this.phoneNumber;
+    // const recipientNumber = '+8801840656367';
+    const message = 'Take Medicine Now!';
+
+    const endpoint = `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`;
+
+    const body = new URLSearchParams();
+    body.set('To', recipientNumber);
+    body.set('From', twilioNumber);
+    body.set('Body', message);
+
+    this.http.post(endpoint, body.toString(), {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Authorization': 'Basic ' + btoa(accountSid + ':' + authToken)
+      }
+    }).subscribe({
+      complete: () => {
+        console.log('SMS notification sent successfully.');
+      },
+      error: (error) => {
+        console.error('Failed to send SMS notification:', error);
+      }
+    }
+  );    
+}
+
+onSendSMS() {
+  this.sendSMSNotification();
+}
+  
+
+
+
   //Datepicker----------------------------------------------------------------------------------------------------------------------------------------
 
   //erzeugt mehrere Events, da ein Mediakament mehrere Tage eingenommen werden muss -------------------------------------------------------
