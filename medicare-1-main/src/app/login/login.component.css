@@ -1,0 +1,84 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-9');
+
+* {
+  box-sizing: border-box;
+  font-family: Helvetica neue, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #101010;
+}
+
+.topnav{
+  display:none;
+}
+
+.container {
+  width: 50vw;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0%);
+    border: 1px solid white;
+    align-content: center;
+    border-radius: 15px;
+    border: 2px solid white;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: aliceblue;
+  padding: 50px;
+  border-radius: 10px;
+  
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-container i {
+  margin-right: 10px;
+  color: #34d0ca;
+}
+
+input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #2421fb;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #1a18d6;
+}

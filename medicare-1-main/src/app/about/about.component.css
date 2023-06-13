@@ -1,0 +1,133 @@
+*{
+  color: #eaeaea;
+}
+
+.mat-grid-list{
+    margin-top: 200px;
+}
+h1{
+    font-size: 5em;
+}
+#wrapper{
+    padding: 5%;
+}
+svg text {
+    font-family: Arial;
+    letter-spacing: 10px;
+    stroke: #ee283b;
+    font-size: 14vw;
+    font-weight: 700;
+    stroke-width: 3;
+    animation: textAnimate 5s infinite alternate;
+  }
+.mt-5{
+    margin-top: 100px;
+}
+.mt-1{
+    margin-top: 40px;
+}
+.mt{
+  margin-top: 8px;
+}
+
+  @keyframes textAnimate {
+    0% {
+      stroke-dasharray: 0 50%;
+      stroke-dashoffset:  20%;
+      fill: #333333
+    }
+    100% {
+      stroke-dasharray: 50% 0;
+      stroke-dashoffstet: -20%;
+      fill: hsla(189, 68%, 75%,0%)
+    }
+  }
+.svgPic{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+ @-webkit-keyframes bg-scrolling-reverse {
+	 100% {
+		 background-position: 50px 50px;
+	}
+}
+ @-moz-keyframes bg-scrolling-reverse {
+	 100% {
+		 background-position: 50px 50px;
+	}
+}
+ @-o-keyframes bg-scrolling-reverse {
+	 100% {
+		 background-position: 50px 50px;
+	}
+}
+ @keyframes bg-scrolling-reverse {
+	 100% {
+		 background-position: 50px 50px;
+	}
+}
+ @-webkit-keyframes bg-scrolling {
+	 0% {
+		 background-position: 50px 50px;
+	}
+}
+ @-moz-keyframes bg-scrolling {
+	 0% {
+		 background-position: 50px 50px;
+	}
+}
+ @-o-keyframes bg-scrolling {
+	 0% {
+		 background-position: 50px 50px;
+	}
+}
+ @keyframes bg-scrolling {
+	 0% {
+		 background-position: 50px 50px;
+	}
+}
+h2{
+    text-align: center;
+    margin-top: 10%;
+}
+
+
+  
+  @keyframes AnimateBG { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+
+  .card {
+    margin-top: 30px;
+    margin-left: 20%;
+    max-width: 50%;
+    animation: glow 2s linear infinite;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0%);
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid whitesmoke;
+    border-radius: 6px;
+}
+
+.stretch-badge > .mat-badge-content {
+    width: auto;
+    border-radius: 13px;
+    right: unset !important;
+  }
+  #mobileTitle{
+    display: none;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    font-size: 2.5vw;
+  }
+  #animatedTitle{
+    display: none;
+  }
+  .svgPic{  
+    max-width: 110%;
+    max-height: 100%;
+  }

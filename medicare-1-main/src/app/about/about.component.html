@@ -1,0 +1,74 @@
+<div class="bg">
+  <div id="wrapper" (window:resize)="onResize($event)">
+    <div class="mt-5">
+      <div id="animatedTitle">
+        <svg width="100%" height="100%">
+          <rect x="0" y="0" width="100%" height="100%" fill="url(#polka-dots)"></rect>
+          <text x="50%" y="98%" text-anchor="middle">
+            MediCare
+          </text>
+        </svg>
+      </div>
+      <div id="mobileTitle">
+        <h1>MediCare</h1>
+      </div>
+    </div>
+    <mat-grid-list cols="2" [cols]="breakpoint" rowHeight="400px">
+      <mat-grid-tile>
+        <p>
+          <strong>Keep track of all your medications at any time with us!</strong> <br><br>
+          Medicare is your app for successful handling of medications, tablets, and pills.
+          <br>With us, you can keep track of which medications you need to take and when. For older individuals
+          in particular, regular medication intake is often a major challenge. Forgetting to take medications
+          poses a significant risk to those individuals and their surroundings. Choose Medicare now and keep
+          an overview of all relevant medications.
+        </p>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <img class="svgPic" src="../../assets/pictures/Doctors-pana.svg" alt="Image of three doctors">
+      </mat-grid-tile>
+    </mat-grid-list>
+    <h2>Get a daily display of your upcoming medications</h2>
+    <mat-card class="card stretch-badge" matBadge="Take medication now!">
+      <div class="overflowHidden">
+        <mat-card-content>
+          <mat-card-title>Medication: <strong>Ibuprofen</strong></mat-card-title>
+          <mat-card-subtitle>Description: blue packaging, red text</mat-card-subtitle>
+          <div class="test">
+            <table>
+              <tr>
+                <td>
+                  Take on:
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  18.03.2021
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Take at the following time of day:
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Morning
+                </td>
+              </tr>
+              <div class="mat-typography"></div>
+              <button class="mat-body-1" mat-raised-button color="accent">Taken</button>
+              <button class="mat-body-1 mt" mat-raised-button color="warn">Adjust</button>
+            </table>
+          </div>
+        </mat-card-content>
+      </div>
+    </mat-card>
+    <p class="mt-1">
+      After initially adding a medication relevant to you, a separate MediCard is created for each intake day.<br>
+      This MediCard includes the name, description, intake day, and the time of day when the medication should be taken.<br>
+      When it's time to take the medication, the text becomes gray and your MediCard receives the "Take medication now" badge.<br>
+      With the buttons on the MediCard, you have the option to mark the medication as taken and delete it or adjust the intake.
+    </p>
+  </div>
+</div>

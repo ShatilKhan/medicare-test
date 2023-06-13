@@ -1,0 +1,11 @@
+
+.angular/cache/*
+node_modules/
+.DS_Store
+.firebase/hosting.ZGlzdC9tZWRpY2FyZQ.cache
+.firebaserc
+firebase.json
+dist/
+.DS_Store
+src/.DS_Store
+src/assets/.DS_Store

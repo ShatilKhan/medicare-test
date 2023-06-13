@@ -1,0 +1,153 @@
+*{
+  color:aliceblue;
+}
+
+
+.mat-checkbox{
+    margin-right: 10px;
+}
+
+.overdue{
+   color: rgb(255, 253, 253);
+   font-style: italic;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0%);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 100%);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0%);
+  }
+}
+
+.card {
+    
+    margin-top: 30px;
+    margin-left: 20%;
+    max-width: 50%;
+    animation: glow 2s linear infinite;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0%);
+    border: 1px solid white;
+    align-content: center;
+    border-radius: 15px;
+    border: 2px solid white;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: aliceblue;
+}
+.overflowHidden{
+    overflow: hidden;
+}
+ul {
+    list-style-type: none; 
+    
+   
+}
+.notVisible{
+    visibility: collapse;
+    height: 0px;
+    width: 0px;
+}
+.visible{
+    visibility: visible;
+
+}
+#add{
+  padding: 20px;
+  position: fixed;
+  display: none;
+  max-width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+}
+#AddButton{
+    margin: 20px;
+}
+
+#newMedicine{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-card {
+  max-width: 400px;
+  animation: glow 2s linear infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0%);
+  border: 1px solid white;
+  align-content: center;
+  border-radius: 15px;
+  border: 2px solid white;
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: aliceblue;
+  
+}
+
+.mat-raised-button ~ .mat-raised-button {
+  margin: 10px;
+}
+
+.mat-button{
+  margin-bottom: 10px;
+}
+
+
+.addButton
+{
+  position:fixed;
+  float: right;
+  bottom: 3%;
+  right: 2%;
+  z-index: 5;
+  animation: glow 2s linear infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0%);
+  border: 1px solid rgb(255, 255, 255);
+  align-content: center;
+  border-radius: 50%;
+  border: 2px solid rgb(18, 187, 221);
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: aliceblue;
+}
+
+.stretch-badge > .mat-badge-content {
+  width: auto;
+  border-radius: 13px;
+  right: unset !important;
+}
+
+#placeholder{
+  display: none;
+  margin: 10%;
+}
+
+#placeholderBottom{
+  position:fixed;
+  display: none;
+  float: right;
+  bottom: 3%;
+  right: 100px;
+}
+.svgPic{  
+  max-width: 90%;
+  max-height: 100%;
+}
+
+#med-adjust{
+  text-decoration: none;
+  color: #000000;
+}
+
+mat-card-subtitle{
+  color: aliceblue;
+}
